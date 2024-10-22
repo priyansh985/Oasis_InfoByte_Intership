@@ -1,11 +1,12 @@
 # new_repo
-this repository is for project that I made during my internship in Oasis_InfoByte
+This Repository is for Project that I made during my internship in Oasis_InfoByte
 ## Table of Contents
 - [Introduction](#introduction)
 - [Project Overview](#project-overview)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Directory Structure](#directory-structure)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
@@ -62,6 +63,26 @@ To use this project, follow these steps:
     ```
 
 6. Follow the on-screen instructions to interact with the project.
+
+## Directory Structure
+Here is the directory structure of the project:
+
+```
+Oasis_InfoByte_Intership/
+├── data/
+│   ├── raw/
+│   ├── processed/
+├── docs/
+├── src/
+│   ├── __init__.py
+│   ├── main.py
+├── tests/
+│   ├── test_main.py
+├── .gitignore
+├── README.md
+├── requirements.txt
+└── LICENSE
+```
 
 ## Contributing
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
