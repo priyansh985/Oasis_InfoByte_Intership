@@ -1,4 +1,4 @@
-# new_repo
+# Oasis_InfoByte_Intership
 This Repository is for Project that I made during my internship in Oasis_InfoByte
 ## Table of Contents
 - [Introduction](#introduction)
@@ -32,7 +32,13 @@ To get a local copy up and running, follow these simple steps:
     ```sh
     cd Oasis_InfoByte_Intership
     ```
-3. Install the required dependencies:
+3. Navigate to the specific project directory:
+    ```sh
+    cd BMI_Calculator
+    cd Password_Generator
+    cd Python_Chat_Application
+    ```
+4. Install the required dependencies:
     ```sh
     pip install -r requirements.txt
     ```
@@ -69,19 +75,18 @@ Here is the directory structure of the project:
 
 ```
 Oasis_InfoByte_Intership/
-├── data/
-│   ├── raw/
-│   ├── processed/
-├── docs/
-├── src/
-│   ├── __init__.py
+├── BMI_Calculator/
 │   ├── main.py
-├── tests/
-│   ├── test_main.py
-├── .gitignore
+│   ├── requirements.txt
+├── Password_Generator/
+│   ├── main.py
+│   ├── requirements.txt
+├── Python_Chat_Application/
+│   ├── main.py
+├── ├── requirements.txt
 ├── README.md
 ├── requirements.txt
-└── LICENSE
+└── license
 ```
 
 ## Contributing
