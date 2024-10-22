@@ -1,0 +1,22 @@
+
+Name: john, Weight: 60.0 kg, Height: 6ft 3in, BMI: 16.53
+Name: sara, Weight: 55.0 kg, Height: 5ft 6in, BMI: 19.57
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+thanks for watchin !Name: balveer, Weight: 70.0 kg, Height: 5ft 11in, BMI: 21.52

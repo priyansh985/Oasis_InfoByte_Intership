@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="message-box">
+    <h2>Chat Room: {{code}}</h2>
+    <div class="messages" id="messages"></div>
+    <div class="inputs">
+        <input type="text" placeholder="Message" name="message" id="message" />
+        <button type="button" name="send" id="send-btn" onclick="sendMessage()">Send</button>
+    </div>
+</div>
+<audio id="notification-sound" src="{{ url_for('static', filename='sounds/ding.mp3') }}" preload="auto"></audio>
+<script type="text/javascript">
+    var socketio = io();
+
+    const messages = document.getElementById("messages");
+    const notificationSound = document.getElementById("notification-sound");
+    const messageInput = document.getElementById("message");
+
+    const createMessage = (name, msg, isCurrentUser) => {
+        const content = document.createElement('div');
+        content.classList.add('message');
+        if (isCurrentUser) {
+            content.classList.add('current-user');
+        } else {
+            content.classList.add('other-user');
+            notificationSound.play();
+        }
+        content.innerHTML = `<strong>${name}:</strong> ${msg}`;
+        messages.appendChild(content);
+    };
+
+    socketio.on('connect', () => {
+        socketio.emit('join', {room: "{{ room }}", name: "{{ session['name'] }}"});
+    });
+
+    socketio.on('message', (data) => {
+        const isCurrentUser = data.name === "{{ session['name'] }}";
+        createMessage(data.name, data.message, isCurrentUser);
+    });
+
+    const sendMessage = () => {
+        const msg = messageInput.value;
+        socketio.emit('message', {room: "{{ room }}", data: msg});
+        messageInput.value = '';
+    };
+
+    messageInput.addEventListener("keypress", (event) => {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            sendMessage();
+        }
+    });
+</script>
+<style>
+    .message {
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+    }
+    .current-user {
+        background-color: #DCF8C6;
+        text-align: right;
+    }
+    .other-user {
+        background-color: #FFFFFF;
+        text-align: left;
+    }
+</style>
+{% endblock %}
