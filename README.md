@@ -12,14 +12,20 @@ This Repository is for Project that I made during my internship in Oasis_InfoByt
 - [Contact](#contact)
 
 ## Introduction
-Welcome to my internship project repository! This project was developed during my internship at Oasis_InfoByte. It showcases the skills and knowledge I gained during my time there.
+Welcome to my internship project repository! These Projects was developed during my internship at Oasis_InfoByte. It showcases the skills and knowledge I gained during my time.
 
 ## Project Overview
-This project involves [brief description of the project]. The main goal was to [main goal of the project]. 
+This Repository involves 3 Project that I've built during my Internship at OasisInfoByte i've built 3 Projects
+1. BMI_Calculator
+2. Password_Generator
+3. Python_Chat_Application 
 
 ## Technologies Used
 - Python
-- [Other technologies or libraries used]
+- Flask, TKinter, String, Random, 
+- HTML
+- CSS
+- Javascript
 
 ## Installation
 To get a local copy up and running, follow these simple steps:
