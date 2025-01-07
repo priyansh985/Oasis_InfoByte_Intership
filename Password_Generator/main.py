@@ -1,3 +1,12 @@
+import tkinter as tk
+from tkinter import messagebox
+
+# Show welcome message
+root = tk.Tk()
+root.withdraw()  # Hide the main window
+messagebox.showinfo("Welcome", "Welcome to this app")
+root.destroy()  # Destroy the main window after showing the message
+
 import random
 import string
 import tkinter as tk
@@ -94,4 +103,3 @@ save_button.grid(row=8, column=1)
 
 # Start the main loop
 root.mainloop()
-
