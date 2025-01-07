@@ -1,6 +1,12 @@
 import tkinter as tk
 from tkinter import messagebox
 
+# Show welcome message
+root = tk.Tk()
+root.withdraw()  # Hide the main window
+messagebox.showinfo("Welcome", "Welcome to this app")
+root.destroy()  # Destroy the main window after showing the message
+
 # Function to calculate BMI
 def calculate_bmi():
     try:
